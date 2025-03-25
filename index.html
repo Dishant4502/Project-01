@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Colored Text Generator</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Rebane's <span class="highlight">Discord</span> Colored Text Generator</h1>
+        <p class="description">This is a simple app that creates colored Discord messages using ANSI color codes.</p>
+        
+        <div class="editor-container">
+            <h2>Create your text</h2>
+            <div contenteditable="true" id="output" class="output-box"></div>
+            
+            <div class="button-group">
+                <button onclick="resetText()">Reset All</button>
+                <button onclick="boldText()">Bold</button>
+                <button class="copy-btn" onclick="copyText()">Copy Text</button>
+            </div>
+            
+            <h3>Text Color</h3>
+            <div class="color-buttons">
+                <button class="red" onclick="applyColor('red', false)"></button>
+                <button class="yellow" onclick="applyColor('yellow', false)"></button>
+                <button class="green" onclick="applyColor('green', false)"></button>
+                <button class="blue" onclick="applyColor('blue', false)"></button>
+                <button class="white border" onclick="applyColor('white', false)"></button>
+            </div>
+            
+            <h3>Background Color</h3>
+            <div class="color-buttons">
+                <button class="red" onclick="applyColor('red', true)"></button>
+                <button class="yellow" onclick="applyColor('yellow', true)"></button>
+                <button class="green" onclick="applyColor('green', true)"></button>
+                <button class="blue" onclick="applyColor('blue', true)"></button>
+                <button class="white border" onclick="applyColor('white', true)"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
